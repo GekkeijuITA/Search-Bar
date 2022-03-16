@@ -36,6 +36,7 @@
                     if(!sqlInjectionPrevention($_POST["searchbar"]))
                     {
                         $searchItem = $_POST["searchbar"];
+                        //You can change "title" and "description" in what you want
                         $sql = "SELECT title,description FROM products WHERE title LIKE '%$searchItem%'";
                         $result = $conn -> query($sql);
                         if($result -> num_rows > 0)
